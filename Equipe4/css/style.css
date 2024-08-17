@@ -1,0 +1,305 @@
+/* Define a fonte padrão para o corpo do documento */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; /* Permite que o conteúdo seja empilhado verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: flex-start; /* Alinha o conteúdo no topo */
+  margin-top: 50px;
+  background-color: var(--body-color);
+  }
+  
+  /* Estilo para títulos principais */
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 2em;
+    color: #333;
+    margin: 20px 0;
+  }
+  
+  /* Estilo para subtítulos */
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+    color: #555;
+    margin: 15px 0;
+  }
+  
+  /* Estilo para texto de parágrafo */
+  p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+    margin: 10px 0;
+  }
+  
+  /* Estilo para botões */
+  button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+
+  
+  /* Estilo para modais */
+  .modal-content {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #333;
+  }
+  
+  /* Estilo para lista de eventos */
+  #eventList li {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+  }
+  
+
+html{
+
+    margin-top: 100px;
+    --body-color:#FFFCFF ;
+  
+    --header-color:#d36c6c;
+  
+    --header-button:#92a1d1;
+  
+    --color-weekdays: #247BA0;
+    
+    --box-shadow: #CBD4C2;
+  
+    --hover: #e8faed;
+  
+    --current-day:#e8f4fa;
+  
+    --event-color: #58bae4;
+  
+    --modal-event: #e8f4fa;
+  
+  
+   --color-day:white;
+    
+  
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 24px; /* Ajuste o tamanho da fonte como desejar */
+    margin-bottom: 20px; /* Espaçamento entre o título e o conteúdo abaixo */
+    font-weight: bold;
+    margin-top: -100px;
+}
+
+
+  button {
+    width: 150px;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px gray;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  #header {
+    padding: 10px;
+    color: var(--header-color) ;
+    font-size: 26px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+  }
+  #header button {
+    background-color:var(--header-button);
+  }
+  #container {
+    width: 770px;
+  }
+  #weekdays {
+    width: 100%;
+    display: flex;
+    color: var(--color-weekdays) ;
+  }
+  #weekdays div {
+    width: 100px;
+    padding: 10px;
+  }
+  #calendar {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .day {
+    width: 100px;
+    padding: 10px;
+    height: 100px;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: var(--color-day);
+    margin: 5px;
+    box-shadow: 0px 0px 3px var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15%;
+  }
+  .day:hover {
+    background-color: var(--hover);
+  }
+  
+  .day + #currentDay {
+    background-color:var(--current-day);
+  }
+  .event {
+    font-size: 10px;
+    padding: 3px;
+    background-color: var(--event-color);
+    color: white;
+    border-radius: 5px;
+    max-height: 55px;
+    overflow: hidden;
+  }
+  .padding {
+    cursor: default !important;
+    background-color: var(--body-color) !important;
+    box-shadow: none !important;
+  }
+  #newEventModal, #deleteEventModal {
+    display: none;
+    z-index: 20;
+    padding: 25px;
+    background-color: var(--modal-event);
+    box-shadow: 0px 0px 3px black;
+    border-radius: 5px;
+    width: 350px;
+    top: 100px;
+    left: calc(50% - 175px);
+    position: absolute;
+    font-family: sans-serif;
+  }
+  #eventTitleInput {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px gray;
+  }
+  #eventTitleInput.error {
+    border: 2px solid red;
+  }
+  #cancelButton, #deleteButton {
+    background-color: var(--header-color);
+  }
+  #saveButton, #closeButton {
+    background-color: var(--header-button);
+  }
+  #eventText {
+    font-size: 14px;
+  }
+  #modalBackDrop {
+    display: none;
+    top: 0px;
+    left: 0px;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  
+  #eventListContainer {
+    position: absolute;
+    right: 20px;
+    top: 100px;
+    width: 300px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #eventList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #eventList li {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #eventList li button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  #eventList li button:hover {
+    background-color: #ff3333;
+  }
+  
+  /* Estilo do modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #passwordSubmitButton{
+    background-color: #685c5c;
+    
+  }
