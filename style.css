@@ -3,7 +3,16 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  margin-top: 200px;
+}
+
+.card-wrapper{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Estilo para títulos principais */
@@ -51,9 +60,9 @@ button {
   display: block;
 }
 .container {
-  margin-top: 300px;
-  width: 50%;
-  margin: 40px auto;
+  
+  width: 100%;
+  max-width: 320px;
   background-color: #f0f0f0;
   padding: 20px;
   border: 1px solid #ddd;
